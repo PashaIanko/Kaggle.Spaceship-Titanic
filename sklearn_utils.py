@@ -177,8 +177,10 @@ def visualize_datasets_distributions(
 
             columns_data = {}
             for dataset_name, df in dataframes_dict_.items():
-                columns_data[dataset_name] = df.values[:, cur_column_number]
-            
+
+                columns_data[dataset_name] = \
+                    df.loc[:, columns_[cur_column_number]].values
+
             for dataset_name, data in columns_data.items():
                 ax[i, j].hist(data, density=True, alpha=0.3, label=dataset_name)
 
