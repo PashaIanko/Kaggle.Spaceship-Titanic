@@ -152,7 +152,7 @@ def visualize_datasets_distributions(
     grid_width_=3,
     figwidth_=10
 ):
-    
+    print(f'Visualizing datasets distributions')
     n_plots = len(columns_)
     if n_plots % grid_width_ == 0:
         grid_height = int(n_plots / grid_width_)
